@@ -1,4 +1,5 @@
 ﻿using BioBooking.MauiBlazor.Data;
+using BioBooking.MauiBlazor.Services;
 using Microsoft.AspNetCore.Components.WebView.Maui;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui;
@@ -20,7 +21,7 @@ namespace BioBooking.MauiBlazor
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
-
+            builder.Services.AddTransient<ITheaterSeatRepository, TheaterSeatRepositoryMock>();
             builder.Services.AddBlazorWebView();
             builder.Services.AddSingleton<WeatherForecastService>();
 

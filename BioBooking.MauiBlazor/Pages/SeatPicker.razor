@@ -8,7 +8,7 @@
         <div style="display:block">
             @foreach (var seat in Seats.Where(s => s.RowNumber == rowNumber))
             {
-                <Seat Model=seat OnSeatStatusChanged=UpdateNumberOfSeatsPicked/>
+                <Seat Model=seat OnSeatStatusChanged=UpdateNumberOfSeatsPicked />
             }
         </div>
     }
